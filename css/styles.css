@@ -1,14 +1,54 @@
+/* Primary text color #8F95A5 */
+/* Secondary text color #263238 */
+/* About numbers color #2A3246 */
+/* Section headers text color #000000 */
+/* Pricing "per month" color #546269*/
+/* Background color #F5F5F5 */
+
+:root {
+    --text-primary: #8F95A5;
+    --text-secondary: #263238;
+    --about-numbers: #2A3246;
+    --per-month: #546269;
+    --section-header: #000000;
+    --background: #F5F5F5;
+}
+
 a {
     text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+
+}
+
 .list {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 1334px;
+    width: 1338px;
     margin: 0 auto;
+}
+
+.section {
+    padding-top: 180px;
+    padding-bottom: 180px;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Header */
@@ -29,7 +69,7 @@ a {
     line-height: 1.5;
 }
 
-.logo > span{
+.logo>span {
     color: #939393;
 }
 
@@ -41,7 +81,7 @@ a {
     padding: 0;
 }
 
-.navigation-item { 
+.navigation-item {
     padding: 70px 0px;
 
     font-weight: 500;
@@ -64,39 +104,104 @@ a {
     padding: 17px 57px;
 }
 
+/* Ця штука знизу непотрібна - її і так додає нойрмалайзер */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .hero {
-  display: flex;
-  margin-right:33px;
+    display: flex;
+    margin-right: 33px;
 }
 
 .hero .title {
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 1.25;
-  margin-bottom: 40px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.25;
+    margin-bottom: 40px;
 }
 
 .hero .text {
-  font-family: "Poppins";
-  font-size: 24px;
-  line-height: 1.5;
-  margin-bottom: 61px;
+    font-family: "Poppins";
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 61px;
 }
 
 .hero button {
-  width: 438px;
-  height: 118px;
-  background: #263238;
-  border-radius: 15px;
-  font-family: "Poppins";
-  font-size: 36px;
-  line-height: 1.5;
-  color: #ffffff;
+    width: 438px;
+    height: 118px;
+    background: #263238;
+    border-radius: 15px;
+    font-family: "Poppins";
+    font-size: 36px;
+    line-height: 1.5;
+    color: #ffffff;
 }
+
+/* -------------About Us------------- */
+
+.about .container {
+    display: flex;
+    gap: 146px;
+}
+
+.about-title {
+    margin-bottom: 60px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: calc(72 / 48);
+    color: var(--section-header);
+}
+
+.about-text {}
+
+.about-paragraph {
+    margin-bottom: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(36 / 20);
+    color: var(--text-primary);
+}
+
+.about-list {
+    display: flex;
+    gap: 131px;
+    flex-basis: calc((100% - 262px) / 3);
+}
+
+.about-list-item {}
+
+.about-number {
+    margin-bottom: 6px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: var(72 / 48);
+    /* Нормалайзер перевибає line-height додаючи такий код:
+    html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        }
+        як виправити поки що не знаю */
+    text-align: center;
+    color: var(--about-numbers);
+}
+
+.about-stat {
+    max-width: 108px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: var(30 / 20);
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.about-image {}
